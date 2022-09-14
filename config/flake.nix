@@ -4,7 +4,7 @@
   };
 
   outputs = inputs@{ nixpkgs, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.kiana-server = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         { _module.args = inputs; }
